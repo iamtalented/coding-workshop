@@ -11,6 +11,8 @@ At the end of the workshop, students should be able to create a basic site about
 1. Traversing the filesystem
 1. Git
 
+[More details here](https://github.com/iamtalented/coding-workshop/blob/master/syllabus/linux.md)
+
 ## Ruby
 
 ### Data Structures (30 mins)
