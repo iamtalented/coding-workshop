@@ -1,30 +1,29 @@
 # Taster workshop
 
-##Using Nitrous.IO + Hello World ROR app
-http://railsapps.github.io/rubyonrails-nitrous-io.html
+##Using Nitrous.IO + Hello World ROR app (1 hour)
+Follow the instructions at http://railsapps.github.io/rubyonrails-nitrous-io.html
 
 # Main One day workshop
 
 At the end of the workshop, students should be able to create a basic site about their favourite topics (hobbies, superheroes, pets).
 
-## Basic Linux usage
+## Basic Linux usage (30mins)
 1. Traversing the filesystem
 1. Git
-1. Running the server
 
 ## Ruby
 
-### Data Structures
+### Data Structures (30 mins)
 1. Primitive variables (int, float, bool)
 1. Objects
 1. hashmaps
 1. Arrays
 
-### Control Structures
+### Control Structures (30 mins)
 1. If/Else
 1. Loops
 
-## Rails
+## Rails (6 hours)
 
 ### Routes
 Creating new routes in their application
