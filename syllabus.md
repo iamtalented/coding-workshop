@@ -49,3 +49,5 @@ Introduce Tools like heroku, and help them push their applications to heroku.
 [Singapore Poly](http://www.sp.edu.sg/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQzcXcKMDDw9LJyMjSwdDfyNjfULsh0VAQgajiw!/?WCM_GLOBAL_CONTEXT=)
 
 [Singapore Ruby Brigade](http://www.meetup.com/Singapore-Ruby-Group/)
+
+[Rails Girls Singapore](http://www.meetup.com/Singapore-Ruby-Group/)
