@@ -73,7 +73,7 @@ Let's start with the `Routes`.
   resources :hobbies
 ```
 
-Browse to `/rails/info/routes` 
+Browse to `/rails/info/routes`
 
 > Explain: What are `Routes`? What `Routes` were created?
 
@@ -103,7 +103,7 @@ Create an empty file at `/app/views/hobbies/new.html`.
     <p>
       <%= f.label :name %><br>
       <%= f.text_field :name %>
-    </p> 
+    </p>
     <p>
       <%= f.submit %>
     </p>
@@ -118,7 +118,7 @@ Let's try and submit => action `create` canot be found!
   class HobbiesController < ApplicationController
     def new
     end
-    
+
     def create
       render plain: params[:hobby].inspect
     end
@@ -145,7 +145,7 @@ Open up the migration file `*_create_hobbies.rb`
   class CreateHobbies < ActiveRecord::Migration
     def change
       create_table :hobbies do |t|
-        t.string :name		
+        t.string :name
 
         t.timestamps
       end
@@ -167,7 +167,7 @@ To save our Hobby in the `Database`, modify the `create` method in `hobbies_cont
   class HobbiesController < ApplicationController
     def new
     end
-    
+
     def create
       @hobby = Hobby.new(params.require(:hobby).permit(:name))
       @hobby.save
@@ -249,7 +249,7 @@ Copy `app/views/hobbies/new.html.erb` to `app/views/hobbies/edit.htnml.erb`.
     <p>
       <%= f.label :name %><br>
       <%= f.text_field :name %>
-    </p> 
+    </p>
     <p>
       <%= f.submit %>
     </p>
@@ -308,3 +308,75 @@ Add the `Delete` link to `app/views/hobbies/index.html.erb`, within the loop.
 - Hours Budgeted
 
 ## Bootstrap
+
+Add `bootstrap-sass` to `Gemfile`.
+
+```
+gem 'bootstrap-sass'
+```
+
+Install the gem.
+
+```
+> bundle install
+```
+
+In `app/assets/stylesheets/`, rename `application.css` to `application.scss` and update to:
+
+```
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+```
+
+In `app/assets/javascripts/`, add to `application.js`:
+
+```
+//=require bootstrap
+```
+
+---
+
+### Update Layout
+
+In `app/views/layout/application.html.erb`, modify the `body` tag to:
+
+```
+  <body>
+    <header class='navbar navbar-default'>
+      <div class='container'>
+        <a class="navbar-brand" href="/">My Hobbies</a>
+      </div>
+    </header>
+    <div class='container'>
+      <%= yield %>
+    </div>
+  </body>
+
+```
+
+### Update Form
+
+In `app/views/hobbies/new.html.erb` and `app/views/hobbies/edit.html.erb` modify to:
+
+```
+  <div class="form-group">
+  ...
+  </div>
+    <div class="form-group">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+```
+
+### Update Index
+
+In `app/views/hobbies/index.html.erb`:
+
+- Add labels
+- Add button colors
+
+## Exercise
+
+### Style `show`
+
+- Make it look beautiful!
+- Add images!
